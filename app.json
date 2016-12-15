@@ -1,0 +1,19 @@
+{
+  "name": "dayplanner",
+  "description": "React + Flux demo application ",
+  "scripts": {
+    "postdeploy": "gulp"
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
