@@ -11,7 +11,7 @@ var lint = require('gulp-eslint'); //lint JS files, including JSX
 var exec = require('child_process').exec //command line from gulp
 
 var config = {
-	port: 5000,
+	PORT: 5000,
 	devBaseUrl: 'http://localhost',
 	paths: {
 		html: './src/*.html',

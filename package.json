@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "an appointment-booking app with React & React-Router",
   "main": "index.js",
+  "start": "gulp",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
