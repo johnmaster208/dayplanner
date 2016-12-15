@@ -47,10 +47,14 @@ Dispatcher.register(function(action){
 		case ActionTypes.BOOK:
 			action.appt.isBooked = true;
 			_appts.splice(slotIndex, 1, action.appt);
+			console.log('The ApptStore successfully received a dispatched action ' + action.actionType);
+			console.log('Store sending emitChange event to interface components');
 			ApptStore.emitChange();
 		break;
 		case ActionTypes.ADJUST:
 			_appts.splice(slotIndex, 1, action.appt);
+			console.log('The ApptStore successfully received a dispatched action ' + action.actionType);
+			console.log('Store sending emitChange event to interface components');
 			ApptStore.emitChange();
 		break;
 		case ActionTypes.REMOVE:
@@ -58,6 +62,8 @@ Dispatcher.register(function(action){
 			action.appt.name = "";
 			action.appt.phone = "";
 			_appts.splice(slotIndex, 1, action.appt);
+			console.log('The ApptStore successfully received a dispatched action ' + action.actionType);
+			console.log('Store sending emitChange event to interface components');
 			ApptStore.emitChange();
 		break;
 		default: 

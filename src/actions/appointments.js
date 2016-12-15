@@ -11,25 +11,21 @@ var Bootstrap = require('bootstrap');
 
 var ApptActions = {
 	book: function(appt) {
-		//debugger;
-		//var apptToBeBooked = AppointmentAPI.updateAppointment(appt);
-		//debugger;
-		//Hey disptacher, go tell all the stores that an author was just created.
+		console.log("Sending payload from action dispatcher via " + ActionTypes.BOOK + " action.", appt);
 		Dispatcher.dispatch({
 			actionType: ActionTypes.BOOK,
 			appt: appt
 		});
 	},
 	adjust: function(appt) {
-		//var apptToBeUpdated = AppointmentAPI.updateAppointment(appt);
+		console.log("Sending payload from action dispatcher via " + ActionTypes.ADJUST + " action.", appt);
 		Dispatcher.dispatch({
 			actionType: ActionTypes.ADJUST,
 			appt: appt
 		});
 	},
 	remove: function(appt) {
-		//var apptToBeRemoved = AppointmentAPI.removeAppt(appt.id);
-		//async api calls can be made here
+		console.log("Sending payload from action dispatcher via " + ActionTypes.REMOVE + " action.", appt);
 		Dispatcher.dispatch({
 			actionType: ActionTypes.REMOVE,
 			appt: appt

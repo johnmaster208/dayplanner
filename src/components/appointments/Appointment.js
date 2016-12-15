@@ -11,19 +11,19 @@ var Appointment = React.createClass({
 			return (
 				<a 
 				href="#" 
-				className={"list-group-item list-group-item-action " + (this.props.appt.isBooked ? 'list-group-item-danger' : 'list-group-item-success') }
+				className={"timeslot list-group-item list-group-item-action " + (this.props.appt.isBooked ? 'list-group-item-danger' : '') }
 				onClick={this.props.onClick.bind(null, this.props.appt)}
 				>
 					<div className="row">
-						<div className="hour-marker col-xs-6 col-md-3">
-							<h1 className="text-muted">{this.props.appt.label}</h1>
+						<div className="col-xs-6 col-md-3">
+							<h1 className="hour-marker lead text-muted">{this.props.appt.label}</h1>
 						</div>
 						<div className="col-xs-6 col-md-9">
 							<div className="list-group-item-heading">
-								<p className="text-muted text-uppercase">{this.props.appt.name}</p>
+								<p className="appt-name">{this.props.appt.name}</p>
 							</div>
 							<div className="list-group-item-text">
-								<p className="text-secondary">{this.props.appt.phone}</p>
+								<p className="appt-phone text-secondary">{this.props.appt.phone}</p>
 							</div>
 						</div>
 					</div>
@@ -33,19 +33,19 @@ var Appointment = React.createClass({
 			return (
 				<a 
 				href="#" 
-				className={"list-group-item list-group-item-action " + (this.props.appt.isBooked ? 'list-group-item-danger' : 'list-group-item-success') }
+				className={"timeslot list-group-item list-group-item-action " + (this.props.appt.isBooked ? 'list-group-item-danger' : '') }
 				onClick={this.props.onClick.bind(null, this.props.appt)}
 				>
 					<div className="row">
-						<div className="hour-marker col-xs-6 col-md-3">
-							<h1 className="text-muted">{this.props.appt.label}</h1>
+						<div className="col-xs-6 col-md-3">
+							<h1 className="hour-marker lead text-muted">{this.props.appt.label}</h1>
 						</div>
 						<div className="col-xs-6 col-md-9">
 							<div className="list-group-item-heading">
-								<p className="text-muted text-uppercase">Available</p>
+								<p className="appt-name-empty">Click to reserve</p>
 							</div>
 							<div className="list-group-item-text">
-								<p className="text-secondary">{this.props.appt.phone}</p>
+								<p className="appt-phone text-secondary"></p>
 							</div>
 						</div>
 					</div>
