@@ -35,11 +35,13 @@ var Dashboard = React.createClass({
 		ApptStore.removeChangeListener(this._onChange);
 	},
 	_onChange: function(){
+		debugger;
 		this.setState({ appts: ApptStore.fetchAppts() });
+		debugger;
 	},
 	handleDefaultFormAction: function(e){
 		e.preventDefault();
-		return false;
+		return;
 	},
 	handleClickState: function(e){
 		var apptIsBooked = typeof e !== undefined && e.isBooked === true ? e.isBooked : false;
@@ -71,7 +73,7 @@ var Dashboard = React.createClass({
 		debugger;
 		obj.event.preventDefault();
 		debugger;
-		this.setState({appt: obj.data});
+		//this.setState({appt: obj.data});
 		debugger;
 		Actions.book(this.state.appt);
 		debugger;
@@ -80,7 +82,6 @@ var Dashboard = React.createClass({
 		toastr.success('New Appointment Added!');
 		//populate a new state for appts, since they've changed.
 		//debugger;
-		//this.setState({appts: ApptStore.fetchAppts()});
 		//debugger;
 	},
 	handleAdjust: function(obj){

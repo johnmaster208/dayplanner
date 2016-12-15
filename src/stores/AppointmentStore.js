@@ -41,12 +41,14 @@ Dispatcher.register(function(action){
 			ApptStore.emitChange();
 		break;
 		case ActionTypes.BOOK:
+			//debugger;
+			action.appt.isBooked = true;
 			var currentSlot = _.find(_appts, {id: action.appt.id});
-			currentSlot.isBooked = true;
-			currentSlot.name = action.appt.name;
-			currentSlot.phone = action.appt.phone;
+			//debugger;
 			var slotIndex = _.indexOf(_appts, currentSlot);
+			//debugger;
 			_appts.splice(slotIndex, 1, action.appt);
+			//debugger;
 			ApptStore.emitChange();
 		break;
 		case ActionTypes.ADJUST:

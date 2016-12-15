@@ -4,9 +4,9 @@ module.exports = {
     {
       "id": 1,
       "label": "9AM",
-      "isBooked": true,
-      "name": "John",
-      "phone": "256-221-6996"
+      "isBooked": false,
+      "name": "",
+      "phone": ""
     },
     {
       "id": 2,
