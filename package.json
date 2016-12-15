@@ -1,0 +1,31 @@
+{
+  "name": "dayplanner",
+  "version": "1.0.0",
+  "description": "an appointment-booking app with React & React-Router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Richardson",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.5",
+    "browserify": "^11.0.1",
+    "flux": "^2.0.3",
+    "guid": "0.0.12",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-eslint": "^0.15.0",
+    "gulp-open": "^1.0.0",
+    "jquery": "^2.1.4",
+    "lodash": "^4.17.2",
+    "object-assign": "^4.1.0",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "reactify": "^1.1.1",
+    "toastr": "^2.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
