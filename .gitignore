@@ -1,4 +1,4 @@
 node_modules
 gulpfile.js
-eslint.config.json
 package.json
+*sublime-workspace
