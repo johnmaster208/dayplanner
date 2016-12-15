@@ -39,7 +39,7 @@ var AppointmentAPI = {
 
         return _clone(appt);
     },
-    deleteAppointment: function(id) {
+    removeAppt: function(id) {
         console.log('Pretend this just deleted an appointment.');
         _.remove(appts, { id: id});
     }

@@ -47,7 +47,7 @@ var AddApptForm = React.createClass({
 								</div>
 								<button
 								className="btn btn-primary"
-								onClick={this.props.onSave.bind(null,{event: event, action: "book", data: this.props.appt})}
+								onClick={this.props.onSave.bind(null, {event: event, action: "book", data: this.props.appt})}
 								>
 								Add Appointment
 								</button>

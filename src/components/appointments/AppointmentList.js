@@ -12,7 +12,7 @@ var AppointmentList = React.createClass({
 				{
 					this.props.appts.map(function(appt, index) {
 						return (
-							<div>
+							<div key={index}>
 								<Appointment appt={appt} key={index} onClick={click} />
 							</div>
 						);

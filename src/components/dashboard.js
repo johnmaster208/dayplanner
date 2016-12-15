@@ -35,9 +35,7 @@ var Dashboard = React.createClass({
 		ApptStore.removeChangeListener(this._onChange);
 	},
 	_onChange: function(){
-		debugger;
 		this.setState({ appts: ApptStore.fetchAppts() });
-		debugger;
 	},
 	handleDefaultFormAction: function(e){
 		e.preventDefault();
@@ -70,22 +68,12 @@ var Dashboard = React.createClass({
 		return this.setState({ appt: this.state.appt });
 	},
 	handleBook: function(obj) {
-		debugger;
 		obj.event.preventDefault();
-		debugger;
-		//this.setState({appt: obj.data});
-		debugger;
 		Actions.book(this.state.appt);
-		debugger;
 		$('#addApptForm').modal('hide');
-		debugger;
 		toastr.success('New Appointment Added!');
-		//populate a new state for appts, since they've changed.
-		//debugger;
-		//debugger;
 	},
 	handleAdjust: function(obj){
-		debugger;
 		obj.event.preventDefault();
 		if(obj.action === 'update') {
 			this.updateAppt(obj.data);
@@ -94,16 +82,14 @@ var Dashboard = React.createClass({
 		}
 	},
 	updateAppt: function(data) {
-		//e.preventDefault();
 		Actions.adjust(data);
 		$('#editApptForm').modal('hide');
-		toastr.success('Appointment updated!');
+		toastr.warning('Appointment updated!');
 	},
-	deleteAppt: function(obj) {
-		//e.preventDefault();
+	deleteAppt: function(data) {
 		Actions.remove(data);
 		$('#editApptForm').modal('hide');
-		toastr.danger('Appointment was removed.');
+		toastr.error('Appointment was removed.');
 	},
 	render: function(){
 		return (

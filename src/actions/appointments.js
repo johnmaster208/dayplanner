@@ -12,7 +12,7 @@ var Bootstrap = require('bootstrap');
 var ApptActions = {
 	book: function(appt) {
 		//debugger;
-		var apptToBeBooked = AppointmentAPI.updateAppointment(appt);
+		//var apptToBeBooked = AppointmentAPI.updateAppointment(appt);
 		//debugger;
 		//Hey disptacher, go tell all the stores that an author was just created.
 		Dispatcher.dispatch({
@@ -21,18 +21,18 @@ var ApptActions = {
 		});
 	},
 	adjust: function(appt) {
-		var apptToBeUpdated = AppointmentAPI.updateAppointment(appt);
+		//var apptToBeUpdated = AppointmentAPI.updateAppointment(appt);
 		Dispatcher.dispatch({
 			actionType: ActionTypes.ADJUST,
 			appt: appt
 		});
 	},
-	remove: function(id) {
-		AppointmentAPI.removeAppt(appt.id);
+	remove: function(appt) {
+		//var apptToBeRemoved = AppointmentAPI.removeAppt(appt.id);
 		//async api calls can be made here
 		Dispatcher.dispatch({
 			actionType: ActionTypes.REMOVE,
-			appt: id
+			appt: appt
 		});
 	}
 };

@@ -51,7 +51,7 @@ var EditApptForm = React.createClass({
 								name="update"
 								className="btn btn-primary" 
 								value="update" 
-								onClick={this.props.onSave.bind(null,{event: event, action: "update", data: this.props.appt})}
+								onClick={this.props.onSave.bind(null, {event: event, action: "update", data: this.props.appt})}
 								>
 								Update Appointment
 								</button>
@@ -60,7 +60,7 @@ var EditApptForm = React.createClass({
 								name="remove"
 								className="btn btn-danger" 
 								value="delete"
-								onClick={this.props.onSave.bind(null,{event: event, action: "delete", data: this.props.appt})}
+								onClick={this.props.onSave.bind(null, {event: event, action: "delete", data: this.props.appt})}
 								>
 								Delete Appointment
 								</button>

@@ -35,33 +35,29 @@ var ApptStore = assign({}, EventEmitter.prototype, {
 });
 
 Dispatcher.register(function(action){
+	if(action.actionType !== 'INITIALIZE'){
+		var currentSlot = _.find(_appts, {id: action.appt.id});
+		var slotIndex = _.indexOf(_appts, currentSlot);
+	}
 	switch(action.actionType){
 		case ActionTypes.INITIALIZE:
 			_appts = action.data.appts;
 			ApptStore.emitChange();
 		break;
 		case ActionTypes.BOOK:
-			//debugger;
 			action.appt.isBooked = true;
-			var currentSlot = _.find(_appts, {id: action.appt.id});
-			//debugger;
-			var slotIndex = _.indexOf(_appts, currentSlot);
-			//debugger;
 			_appts.splice(slotIndex, 1, action.appt);
-			//debugger;
 			ApptStore.emitChange();
 		break;
 		case ActionTypes.ADJUST:
-			//var existingAuthor = _.find(_authors, {id: action.author.id});
-			//var existingAuthorIndex = _.indexOf(_authors, existingAuthor);
-			//_authors.splice(existingAuthorIndex, 1, action.author);
+			_appts.splice(slotIndex, 1, action.appt);
 			ApptStore.emitChange();
 		break;
 		case ActionTypes.REMOVE:
-			//debugger;
-			//_.remove(_authors, function(author) {
-			//	return action.id === author.id;
-			//});
+			action.appt.isBooked = false;
+			action.appt.name = "";
+			action.appt.phone = "";
+			_appts.splice(slotIndex, 1, action.appt);
 			ApptStore.emitChange();
 		break;
 		default: 
