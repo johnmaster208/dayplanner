@@ -6,9 +6,9 @@ var Redirect = Router.Redirect;
 var Route = Router.Route;
 
 var routes = (
-	<Route name="app" path="/" handler={require('./components/app')}>
-		<DefaultRoute handler={require('./components/Dashboard')} />
-		<Route name="dashboard" path="/dashboard" handler={require('./components/Dashboard')} />
+	<Route name="app" path="/" handler={require('./components/app.js')}>
+		<DefaultRoute handler={require('./components/dashboard.js')} />
+		<Route name="dashboard" path="/dashboard" handler={require('./components/dashboard.js')} />
 		<Redirect from="*" to="dashboard" />
 	</Route>
 );
