@@ -27,3 +27,6 @@ Your default browser should open the application at the following address:
 http://localhost:5000/#/dashboard
 ```
 If your hostname or port conflict with these, feel free to modify the ```config``` variables in the gulpfile.js
+
+## Demo
+Demonstration available on [Heroku](https://rocky-ridge-51031.herokuapp.com/#/dashboard)
