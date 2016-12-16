@@ -7,9 +7,8 @@
     "node": "4.6.1"
   },
   "scripts": {
-    "preinstall": "gulp build",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "gulp build"
   },
   "author": "John Richardson",
   "license": "ISC",
