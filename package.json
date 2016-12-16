@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "gulp build"
+    "prestart": "gulp build"
   },
   "author": "John Richardson",
   "license": "ISC",
