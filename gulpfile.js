@@ -92,6 +92,10 @@ gulp.task('watch',function(){
 	gulp.watch(config.paths.js, ['js','lint']);
 });
 
+//build task for deployments (AWS, Heroku)
+gulp.task('build',['html','css','js','images']);
+
+//default taskf for local development
 gulp.task('default',['html','css','js','images','lint','open','watch']);
 
 
