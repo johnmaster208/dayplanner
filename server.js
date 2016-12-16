@@ -1,5 +1,6 @@
 var c = require('connect');
 var ss = require('serve-static');
-c().use(ss('./dist')).listen(5000,function(){
-	console.log('Serving on port 5000...');
+var port = process.env.PORT || 8080;
+c().use(ss('./dist')).listen(port,function(){
+	console.log('Serving on port ' + port + '...');
 });
