@@ -1,36 +1,36 @@
 {
-  "name": "dayplanner",
-  "version": "1.0.0",
-  "description": "an appointment-booking app with React & React-Router",
-  "main": "index.js",
-  "engines": {
-    "node": "4.6.1"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "prestart": "gulp build"
-  },
-  "author": "John Richardson",
-  "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^3.3.5",
-    "connect": "^3.5.0",
-    "flux": "^2.0.3",
-    "guid": "0.0.12",
-    "jquery": "^2.1.4",
-    "lodash": "^4.17.2",
-    "object-assign": "^4.1.0",
-    "react": "^0.13.3",
-    "react-router": "^0.13.3",
-    "serve-static": "^1.11.1",
-    "toastr": "^2.1.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^2.2.0",
-    "gulp-eslint": "^0.15.0",
-    "gulp-open": "^1.0.0",
-    "reactify": "^1.1.1",
-    "browserify": "^11.0.1",
-    "vinyl-source-stream": "^1.1.0"
-  }
+    "name": "dayplanner",
+    "version": "1.0.0",
+    "description": "an appointment-booking app with React & React-Router",
+    "main": "index.js",
+    "engines": {
+        "node": "4.6.1"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "prestart": "gulp build"
+    },
+    "author": "John Richardson",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap": "^3.3.5",
+        "connect": "^3.5.0",
+        "flux": "^2.0.3",
+        "guid": "0.0.12",
+        "jquery": "^3.0.0",
+        "lodash": "^4.17.2",
+        "object-assign": "^4.1.0",
+        "react": "^0.13.3",
+        "react-router": "^0.13.3",
+        "serve-static": "^1.11.1",
+        "toastr": "^2.1.0",
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.0",
+        "gulp-connect": "^2.2.0",
+        "gulp-eslint": "^0.15.0",
+        "gulp-open": "^1.0.0",
+        "reactify": "^1.1.1",
+        "browserify": "^11.0.1",
+        "vinyl-source-stream": "^1.1.0"
+    }
 }
